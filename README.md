@@ -21,7 +21,6 @@
 
 * Shows an example.  
 * Anytime you get .value, it’s always a string.
-* +num = a way to convert a variable into a number
 * `npm install typescript` install it globally.
 * **Ran into some issues getting typescript installed, had to update node and npm and all that stuff**
 * **Updated node / npm**
@@ -34,3 +33,4 @@
 * `function add(num1: number, num2: number)` <-- Type casting on function params.  oooo!
 * `tsc zack-ts.js` <-- compiles the thingie
   * will log errors in terminal, but still compiles if error encountered.
+* ` console.log(add(+input1.value, +input2.value));` <-- `+` converts the values to numbers?  Don't think this is specific to TS, but is a JS thing.
