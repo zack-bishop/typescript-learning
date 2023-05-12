@@ -106,7 +106,7 @@ if (typeof n1 !== 'number') {
 * The core primitive types in TypeScript are always lowercase.  Not `Number`.  Instead `number`.
 
 ### 14. Working with Numbers, Strings & Booleans
-
+* if a string is present in an equation, i.e. `(string + number1 + number2)`, the script will concatenate the numeric values instead of adding them.
 
 ### 15. Type Assignment & Type Interface
 
