@@ -71,3 +71,56 @@
 * `npm install --save-dev lite-server` <-- `--save-dev` = dev only dependency
 * `npm start` <-- created this command to run the `lite-server`
   * had to add the start command.
+
+
+## Section 2
+
+### 10. Module Introduction
+
+### 11. Using Types
+
+### 12. TypeScript Types vs. JavaScript Types
+
+### 13. Important: Type Casting
+
+### 14. Working with Numbers, Strings & Booleans
+
+### 15. Type Assignment & Type Interface
+
+### Quiz 1: Understanding Types
+
+### 17. Nested Objects & Types
+
+### 18. Array Types
+
+### 19. Working with Tuples
+
+### 20. Working with Enums
+
+### 21. The "any" Type
+
+### 22. Union Types
+
+### 23. Literal Types
+
+### 24. Type Aliases / Custom Types
+
+### 25. Type Aliases & Object Types
+
+### Quiz 2: Core Types & Concepts
+
+### 26. Function Return Types & "Void'
+
+### 27. Functions as Types
+
+### 28. Function Types & Callbacks
+
+### Quiz 3: Functions & Types
+
+### 29. The "unknown" Type
+
+### 30. The "never" Type
+
+### 31. Wrap Up
+
+### 32. Useful Resources & Links/
