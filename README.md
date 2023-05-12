@@ -20,19 +20,20 @@
 ### 1.4
 
 * Shows an example.  
-* Anytime you get .value, it’s always a string.
+* With Vanilla JS, anytime you get `.value`, it’s always a string.
 * `npm install typescript` install it globally.
 * **Ran into some issues getting typescript installed, had to update node and npm and all that stuff**
-* **Updated node / npm**
-* **TS only works on node v12?**
-* **Tested projects just to make sure I didn't borke them.  We're good.**
+  * **Updated node / npm**
+  * **TS only works on node v12?**
+  * **Tested projects just to make sure I didn't bork them.  We're good.**
 * `tsc --version` Check it's version.  `tsc` is what you use to invoke TS commands
 * installed TS extensions into PHPStorm. 
-* `document.getElementById("num1")!` <-- the `!` at the end tells TS that it will always find an element with that ID.
-* `document.getElementById("num1")! as HTMLInputElement;` <-- Type casting.  oooo!
+* `const num1 = document.getElementById("num1")!` <-- the `!` at the end tells TS that it will always find an element with that ID.
+* `const numb2 = document.getElementById("num1")! as HTMLInputElement;` <-- Type casting.  oooo!
 * `function add(num1: number, num2: number)` <-- Type casting on function params.  oooo!
-* `tsc zack-ts.js` <-- compiles the thingie
+* `tsc zack-ts.js` <-- compiles the TS
   * will log errors in terminal, but still compiles if error encountered.
-* ` console.log(add(+input1.value, +input2.value));` <-- `+` converts the values to numbers?  Don't think this is specific to TS, but is a JS thing.
+* ` console.log(add(+input1.value, +input2.value));` <-- `+` converts the values to numbers?  
+  * Don't think this is specific to TS, but is a JS thing.
 
 ### 1.5
