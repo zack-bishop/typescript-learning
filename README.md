@@ -1,11 +1,10 @@
-# typescript-learning
+# TypeScript Learning: Zack's Notes
 
-
-##  Section 1. 
-### 1.1
+##  Section 1: Getting Started.
+### 1.1 Welcome to the Course
 * brief introduction
 
-### 1.2
+### 1.2 What is TypeScript & Why Should You Use It?
 
 * TypeScript = A JavaScript Superset 
 * Browsers can’t execute it 
@@ -14,10 +13,10 @@
 * One big advantage of TypeScript: It adds types. 
 * Basically, TypeScript gives you some new features / cleaner syntax that then gets compiled into mess / difficult / complex JS
 
-### 1.3
+### 1.3 Join Our Learning Community
 * just an announcement to join their discord
 
-### 1.4
+### 1.4 Installing & Using TypeScript
 
 * Shows an example.  
 * With Vanilla JS, anytime you get `.value`, it’s always a string.
@@ -36,4 +35,11 @@
 * ` console.log(add(+input1.value, +input2.value));` <-- `+` converts the values to numbers?  
   * Don't think this is specific to TS, but is a JS thing.
 
-### 1.5
+### 1.5 Overview
+* TypeScript = Makes writing clean, good code easier
+* Main claim to fame is typecasting, hence the name
+* You can use next-gen JavaScript, but compiles for older browser.  Kinda like Babel
+* Includes Non-JS features, like interfaces or Generics <-- I feel like I sorta know what these are, look into more down the road.
+* Meta-programming features like Decorations <-- no idea what these are.
+* Rich Configuration Options <-- You can configure the compiler in a lot of ways.  Interesting.  Never really done anything like that before.
+
