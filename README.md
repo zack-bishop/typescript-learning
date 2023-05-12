@@ -76,10 +76,20 @@
 ## Section 2
 
 ### 10. Module Introduction
+* very brief intro, nothing worth noting
 
 ### 11. Using Types
+* Core Types
+  * `number`
+    * Good for all numbers
+    * Only one number type, no `int`, `float`, etc.
+  * `string`
+  * `boolean` <-- true / false
+    * No 'truthy' / 'falsy' types, strictly true/false9-
 
 ### 12. TypeScript Types vs. JavaScript Types
+* function foo(n: number, bool: boolean, s: string)
+* TypeScript only helps with development, it doesn't change anything about Javascript at runtime
 
 ### 13. Important: Type Casting
 
