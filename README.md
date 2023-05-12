@@ -68,5 +68,6 @@
 * Basic setup of the Project we'll be working throughout the course.
 * `npm init` <-- think this is the first I've run this before.
   * ran into an issue.  Couldn't run this because of my node version.  ran `nvm install v14`
-* `npm install --save-dev lite-service` <-- `--save-dev` = dev only dependency
-* `npm start`
+* `npm install --save-dev lite-server` <-- `--save-dev` = dev only dependency
+* `npm start` <-- created this command to run the `lite-server`
+  * had to add the start command.
