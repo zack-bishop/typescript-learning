@@ -88,7 +88,7 @@
     * No 'truthy' / 'falsy' types, strictly true/false9-
 
 ### 12. TypeScript Types vs. JavaScript Types
-* `function foo(n: number, bool: boolean, s: string)` <-- set types in function declaration.
+* `function foo(n: number)` <-- set types in function declaration.
 * TypeScript only helps with development, it doesn't change anything about Javascript at runtime
 
 ### 13. Important: Type Casting
@@ -96,8 +96,17 @@
 * `throw new Error('foobar')` <-- how you can output your own errors
 * JavaScript is dynamically typed. 
 * TypeScript is statically typed
+* In very general terms, doing type checks in functoins is not the "TypeScript way", so we want to avoid it.  Instead, we want to try to use TypeScript's checks / hints to make sure the code you're compiling is clean. Example to avoid:
+
+```
+if (typeof n1 !== 'number') {
+  // do something
+}
+```
+* The core primitive types in TypeScript are always lowercase.  Not `Number`.  Instead `number`.
 
 ### 14. Working with Numbers, Strings & Booleans
+
 
 ### 15. Type Assignment & Type Interface
 
