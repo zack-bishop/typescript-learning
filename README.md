@@ -109,6 +109,13 @@ if (typeof n1 !== 'number') {
 * if a string is present in an equation, i.e. `(string + number1 + number2)`, the script will concatenate the numeric values instead of adding them.
 
 ### 15. Type Assignment & Type Interface
+* Always explicitly assign types within function parameters, i.e. `param: type`.
+  * The above is introduced TypeScript
+* The reason you don't include a type when declaring variables is because of TypeScript's `Type inferrence`.
+  * TypeScript does its best to figure out it's type when variables are declared.
+  * You can do this `let variable: number = 2.8;`, i.e. include a type after the variable name, but is redundant and not considered a best practice because the value is being set when the variable is declared.
+    * However, `let variable: number` is a good practice if it's value is not being set immediately.
+* Checking types is **THE** core task of TypeScript. 
 
 ### Quiz 1: Understanding Types
 
