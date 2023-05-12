@@ -1,7 +1,7 @@
 # typescript-learning
 
 
-##  1. 
+##  Section 1. 
 ### 1.1
 * brief introduction
 
@@ -34,3 +34,5 @@
 * `tsc zack-ts.js` <-- compiles the thingie
   * will log errors in terminal, but still compiles if error encountered.
 * ` console.log(add(+input1.value, +input2.value));` <-- `+` converts the values to numbers?  Don't think this is specific to TS, but is a JS thing.
+
+### 1.5
