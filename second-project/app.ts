@@ -8,7 +8,8 @@
 
 const person = {
     name: 'Robert',
-    age: 30
+    age: 30,
+    hobbies: ['Sports', 'Cooking', 'Anime']
 }
 
 const product = {
@@ -17,10 +18,12 @@ const product = {
     tags: ['great-offer', 'hot-and-new'],
     details: {
         title: 'Red Carpet',
-        description: 'A great carpet - almost brand-new!'
+        description: 'A great carpet - almost brand-new!',
     }
 }
 
 console.log(person.name);
 
-console.log(product.details.title);
+for (const hobby of person.hobbies) {
+    console.log(hobby);
+}

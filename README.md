@@ -137,7 +137,7 @@ const person = {...}
 ```
 
 ### 17. Nested Objects & Types 
-* nesting is a possible:
+* Nesting objects is possible and very easy:
 
 ```
 const product = {
@@ -153,8 +153,14 @@ const product = {
 console.log(product.details.title);
 ```
 
-
 ### 18. Array Types
+* TypeScript supports any JavaScript arrays.
+* TypeScript will detect/infere their types, i.e. `['sports', 'cooking']` will be cast as `string[]`.
+* Explicitly set it: `let favoriteActivities: string[]`. 
+* Mixed arrays: `let mixedArray: any[]`.
+  * Don't use too often, as having mixed arrays removes the benefits that TypeScript provides.
+* Wow.  Why did I not know you can do a loop like this in regular JS: `for (const item of object.items) {...}`?
+  * When iterating through a loop, TypeScript will infer the item's type.  For instance, with a string you could do `item.toUpperCase()`. 
 
 ### 19. Working with Tuples
 
