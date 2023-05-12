@@ -1,9 +1,11 @@
 # typescript-learning
 
-## Part 1.1
+
+##  1. 
+### 1.1
 * brief introduction
 
-### Part 1.2
+### 1.2
 
 * TypeScript = A JavaScript Superset 
 * Browsers can’t execute it 
@@ -12,10 +14,10 @@
 * One big advantage of TypeScript: It adds types. 
 * Basically, TypeScript gives you some new features / cleaner syntax that then gets compiled into mess / difficult / complex JS
 
-### Part 1.3
+### 1.3
 * just an announcement to join their discord
 
-### Part 1.4
+### 1.4
 
 * Shows an example.  
 * Anytime you get .value, it’s always a string.
@@ -28,3 +30,7 @@
 * `tsc --version` Check it's version.  `tsc` is what you use to invoke TS commands
 * installed TS extensions into PHPStorm. 
 * `document.getElementById("num1")!` <-- the `!` at the end tells TS that it will always find an element with that ID.
+* `document.getElementById("num1")! as HTMLInputElement;` <-- Type casting.  oooo!
+* `function add(num1: number, num2: number)` <-- Type casting on function params.  oooo!
+* `tsc zack-ts.js` <-- compiles the thingie
+  * will log errors in terminal, but still compiles if error encountered.
