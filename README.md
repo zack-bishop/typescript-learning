@@ -120,8 +120,8 @@ if (typeof n1 !== 'number') {
 ### Quiz 1: Understanding Types
 * Got a 3/4.  The last question threw me off.
 
-### 17. Nested Objects & Types <-- This section needs more review.  It's fuzzy in my brain.
-* using `const person: object = {...}` to cast an object as a JavaScript object is limiting, as it sort of strips away your IDE's ability to code hint. 
+### 16. Object Types
+* using `const person: object = {...}` to cast an object as a JavaScript object is limiting, as it sort of strips away your IDE's ability to code hint.
   * if you tried to access a property of the object above, it will yell at you regardless of whether the property actually exists or not.
 * instead, use `const person: {} = {...}`, the `{}` is TypeScripts notation of "specialized object types."
   * within the `{}` you can define `key: type;` pairs, i.e.:
@@ -130,6 +130,27 @@ const person: {
     name: string;
     age: number;
 } = {...}
+```
+* all that said, apparently it's better to just let TypeScript infere the type, i.e.:
+```
+const person = {...}
+```
+
+### 17. Nested Objects & Types <-- This section needs more review.  It's fuzzy in my brain.
+* nesting is a possible:
+
+```
+const product = {
+  id: 'abc1',
+  price: 12.99,
+  tags: ['great-offer', 'hot-and-new'],
+  details: {
+    title: 'Red Carpet',
+    description: 'A great carpet - almost brand-new!'
+  }
+}
+
+console.log(product.details.title);
 ```
 
 
