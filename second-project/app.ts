@@ -6,11 +6,21 @@
 //     age: 30,
 // };
 
-const person = {
+const person: {
+    name: string;
+    age: number;
+    hobbies: string[];
+    role: [number, string];
+} = {
     name: 'Robert',
     age: 30,
-    hobbies: ['Sports', 'Cooking', 'Anime']
+    hobbies: ['Sports', 'Cooking', 'Anime'],
+    role: [2, 'author']
 }
+
+
+person.role.push('admin');
+
 
 const product = {
     id: 'abc1',
@@ -23,6 +33,7 @@ const product = {
 }
 
 console.log(person.name);
+console.log(person.role);
 
 for (const hobby of person.hobbies) {
     console.log(hobby);

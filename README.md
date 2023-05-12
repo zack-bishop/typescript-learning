@@ -162,7 +162,25 @@ console.log(product.details.title);
 * Wow.  Why did I not know you can do a loop like this in regular JS: `for (const item of object.items) {...}`?
   * When iterating through a loop, TypeScript will infer the item's type.  For instance, with a string you could do `item.toUpperCase()`. 
 
+** Note: It's really interesting how the presenter keeps mentioning things to the effect of "Don't stricktly type cast things, instead let TypeScript infer / do everything for you."  Dunno how I feel about that.
+
 ### 19. Working with Tuples
+* WTF is a Tuple?
+* A `Tuple` is an array with a fixed length and type?  is a `Tuple` limited to only two values?
+* Example `role: [2, 'author']`.  It's almost like a `key: value` pair.  In this example, the 2 is akin to the `ID` of `author`.
+* Looks like there's some potential issues with using `Tuples`.  For instance you could `person.role[1] = 10`, or `person.role.push('admin')`
+* When using Tuples is when you'd want to explictly cast an object, i.e.:
+
+```
+const person: {
+  name: string;
+  age: number;
+  role: [number, string]';
+} 
+```
+
+* if explicitly declared like above, then `person.role[1] = 10` would fail.
+* however, pushing would still "work", i.e. `person.rol.push('admin')` because apparently you're allowed to push to tuples.
 
 ### 20. Working with Enums
 
