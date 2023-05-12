@@ -43,3 +43,29 @@
 * Meta-programming features like Decorations <-- no idea what these are.
 * Rich Configuration Options <-- You can configure the compiler in a lot of ways.  Interesting.  Never really done anything like that before.
 
+### 1.6 Course Outline
+* Getting Started <-- In progress
+* TypeScript Basics
+* Compiler + Configuration
+* Working with Next-Gen JS Code
+* Classes & Interfaces
+* Advanced Types & TypeScript Features
+* Generics 
+* Decorators
+* Time to Practice - Full Project
+* Namespaces & Modules
+* Webpack & TypeScript
+* Third-Party Libraries & TypeScript
+* React + TypeScript & NodeJS + TyeScript 
+
+### 1.7 How to Get the Most Out of the Course
+* Just tips that were all common sense that don't necessitate notes.
+
+### 1.8 Setting up a Code Editor / IDE
+* Recommends using VScode.  Hard pass. Skipped.
+
+### 1.9 Course Project.
+* Basic setup of the Project we'll be working throughout the course.
+* `npm init` <-- think this is the first I've run this before.
+  * ran into an issue.  Couldn't run this because of my node version.  ran `nvm install v14`
+* `npm install --save-dev lite-service` <-- `--save-dev` = dev only dependency
