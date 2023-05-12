@@ -69,3 +69,4 @@
 * `npm init` <-- think this is the first I've run this before.
   * ran into an issue.  Couldn't run this because of my node version.  ran `nvm install v14`
 * `npm install --save-dev lite-service` <-- `--save-dev` = dev only dependency
+* `npm start`
