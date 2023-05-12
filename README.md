@@ -118,8 +118,20 @@ if (typeof n1 !== 'number') {
 * Checking types is **THE** core task of TypeScript. 
 
 ### Quiz 1: Understanding Types
+* Got a 3/4.  The last question threw me off.
 
-### 17. Nested Objects & Types
+### 17. Nested Objects & Types <-- This section needs more review.  It's fuzzy in my brain.
+* using `const person: object = {...}` to cast an object as a JavaScript object is limiting, as it sort of strips away your IDE's ability to code hint. 
+  * if you tried to access a property of the object above, it will yell at you regardless of whether the property actually exists or not.
+* instead, use `const person: {} = {...}`, the `{}` is TypeScripts notation of "specialized object types."
+  * within the `{}` you can define `key: type;` pairs, i.e.:
+```
+const person: {
+    name: string;
+    age: number;
+} = {...}
+```
+
 
 ### 18. Array Types
 
