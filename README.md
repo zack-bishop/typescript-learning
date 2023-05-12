@@ -1,10 +1,10 @@
 # TypeScript Learning: Zack's Notes
 
 ##  Section 1: Getting Started.
-### 1.1 Welcome to the Course
+### 1 Welcome to the Course
 * brief introduction
 
-### 1.2 What is TypeScript & Why Should You Use It?
+### 2 What is TypeScript & Why Should You Use It?
 
 * TypeScript = A JavaScript Superset 
 * Browsers can’t execute it 
@@ -13,10 +13,10 @@
 * One big advantage of TypeScript: It adds types. 
 * Basically, TypeScript gives you some new features / cleaner syntax that then gets compiled into mess / difficult / complex JS
 
-### 1.3 Join Our Learning Community
+### 3 Join Our Learning Community
 * just an announcement to join their discord
 
-### 1.4 Installing & Using TypeScript
+### 4 Installing & Using TypeScript
 
 * Shows an example.  
 * With Vanilla JS, anytime you get `.value`, it’s always a string.
@@ -35,7 +35,7 @@
 * ` console.log(add(+input1.value, +input2.value));` <-- `+` converts the values to numbers?  
   * Don't think this is specific to TS, but is a JS thing.
 
-### 1.5 Overview
+### 5 Overview
 * TypeScript = Makes writing clean, good code easier
 * Main claim to fame is typecasting, hence the name
 * You can use next-gen JavaScript, but compiles for older browser.  Kinda like Babel
@@ -43,7 +43,7 @@
 * Meta-programming features like Decorations <-- no idea what these are.
 * Rich Configuration Options <-- You can configure the compiler in a lot of ways.  Interesting.  Never really done anything like that before.
 
-### 1.6 Course Outline
+### 6 Course Outline
 * Getting Started <-- In progress
 * TypeScript Basics
 * Compiler + Configuration
@@ -58,13 +58,13 @@
 * Third-Party Libraries & TypeScript
 * React + TypeScript & NodeJS + TyeScript 
 
-### 1.7 How to Get the Most Out of the Course
+### 7 How to Get the Most Out of the Course
 * Just tips that were all common sense that don't necessitate notes.
 
-### 1.8 Setting up a Code Editor / IDE
+### 8 Setting up a Code Editor / IDE
 * Recommends using VScode.  Hard pass. Skipped.
 
-### 1.9 Course Project.
+### 9 Course Project.
 * Basic setup of the Project we'll be working throughout the course.
 * `npm init` <-- think this is the first I've run this before.
   * ran into an issue.  Couldn't run this because of my node version.  ran `nvm install v14`
@@ -88,10 +88,14 @@
     * No 'truthy' / 'falsy' types, strictly true/false9-
 
 ### 12. TypeScript Types vs. JavaScript Types
-* function foo(n: number, bool: boolean, s: string)
+* `function foo(n: number, bool: boolean, s: string)` <-- set types in function declaration.
 * TypeScript only helps with development, it doesn't change anything about Javascript at runtime
 
 ### 13. Important: Type Casting
+* `console.log(typeof number1)` <-- Not sure if I used `typeof` operator before, noting it here for future use.
+* `throw new Error('foobar')` <-- how you can output your own errors
+* JavaScript is dynamically typed. 
+* TypeScript is statically typed
 
 ### 14. Working with Numbers, Strings & Booleans
 
