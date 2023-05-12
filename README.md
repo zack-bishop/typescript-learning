@@ -26,4 +26,5 @@
 * **TS only works on node v12?**
 * **Tested projects just to make sure I didn't borke them.  We're good.**
 * `tsc --version` Check it's version.  `tsc` is what you use to invoke TS commands
-* installed TS extensions into PHPStorm.
+* installed TS extensions into PHPStorm. 
+* `document.getElementById("num1")!` <-- the `!` at the end tells TS that it will always find an element with that ID.
