@@ -1,4 +1,9 @@
-function combine(input1: number | string, input2: number | string) {
+type Combinable = number | string;
+
+function combine(
+    input1: Combinable,
+    input2: Combinable,
+) {
 
     let result;
 

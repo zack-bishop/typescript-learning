@@ -203,13 +203,34 @@ const person: {
 * You'll most likely have to do some type checks, i.e. `if( typeof X === 'number')` when working with Union Types
 
 ### 23. Literal Types
-* 
-
+* Similar to Union Types in appearance: `function( resultConversion: 'as-number' | 'as-text' );`
+* This seems pretty handy!
+* Basically, it will lock you into only using a predetermined list of strings instead of any old string.
+ 
 ### 24. Type Aliases / Custom Types
+* Lets you define your own type for TypeScript to use.
+* Handy to use with Union and Literals
+
+```
+type Combinable = number | string;
+type ConverstionDescription = 'as-number' | 'as-text'
+
+function combine(
+    input1: Combinable,
+    input2: Combinable,
+    resultConversion: ConversionDescription
+) {
+  ...
+}
+```
+
 
 ### 25. Type Aliases & Object Types
+* Also type aliases are handy for very complex object types.
+* Seems like these are great for complex and/or repetitive things.
 
 ### Quiz 2: Core Types & Concepts
+* Missed question #2.  I always get confused with arrays and objects.  Arrays use `[]`.  Objects use `{}`.
 
 ### 26. Function Return Types & "Void'
 
