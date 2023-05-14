@@ -183,12 +183,27 @@ const person: {
 * however, pushing would still "work", i.e. `person.rol.push('admin')` because apparently you're allowed to push to tuples.
 
 ### 20. Working with Enums
+* Are similar to tuples.
+* Enum <-- only exists in TypeScript
+* Is useful when you want to do essentially a "key value pair", but not in a array
+* Declare it like this: `enum Role { ADMIN, READ_ONLY, AUTHOR};`
+* Access it like this: `Role.ADMIN`
+* Get when you need something human readable that maps to another value.
+
 
 ### 21. The "any" Type
+* Doesn't tell TypeScript anything.
+* TypeScript won't yell at you for using it.
+* But, it also strips away the core advantages of using TypeScript.  
+* Use it as a fallback when you don't know what kind of data you'd be getting.
 
 ### 22. Union Types
+* Can be used in function parameters if you want to accept two or more types `function foobar(input1: number | string) {...}`;
+* TypeScript doesn't like the `+` operator when used with union types.  It will yell at you, but it will still work.
+* You'll most likely have to do some type checks, i.e. `if( typeof X === 'number')` when working with Union Types
 
 ### 23. Literal Types
+* 
 
 ### 24. Type Aliases / Custom Types
 
