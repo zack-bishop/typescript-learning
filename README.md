@@ -233,12 +233,49 @@ function combine(
 * Missed question #2.  I always get confused with arrays and objects.  Arrays use `[]`.  Objects use `{}`.
 
 ### 26. Function Return Types & "Void'
+* Define a return time by: `function foobar(x: number, y: string): boolean {...}`.
+* In general, unless you have a good reason to define the return type, you should let TypeScript infer the return type.
+* **Note: Starting to see a trend here: "Just Let TypeScript Do It's Thing"
+* you can use a `:void` as a return type for functions.     
 
 ### 27. Functions as Types
+* Apparently in JS, you can do this:
+```
+function add(x, y){...};
+
+let functionVariable = add; //<--- this creates a "pointer" to the `add` function.
+
+functionVariable(x, y); // <-- Then, you can call the "variable" like you would the orginial function.  Nuts. 
+```
+* The above is problematic because TypeScript will find the following as valid:
+
+```
+function add(x, y){...};
+
+let functionVariable = add; 
+functionVariable = 5;
+
+functionVariable(x, y); // <-- This will succesffully build, but will throw a console log error.` 
+```
+
+* One step in the right direction: `let functionVariable: Function` <-- setting the type for this variable as `Function`.
+* This still could cause problems because `Function` might be too generic.  
+* You can use function types to be more precise: `let functionVariable: (a:number, b:number) => returnType`
+* **Question: Can you make a type alias for the above?
 
 ### 28. Function Types & Callbacks
+* I always sucked with the concept of callback function.
+* Callbacks are what you want to do after the function finishes.
+* Two things I noted:
+  * `_cb` <-- My IDE liked added the underscore to make the TypeScript infer correctly.
+  * My IDE recommended I drop the `()` around the callback function `result`:
+```
+addAndHandle( 10, 20, result => {...});
+```
 
 ### Quiz 3: Functions & Types
+* Missed a question about what the callback function would return.
+* Missed a question about the types.  I got it wrong, because I was assuming they meant literally `Function` as the type instead of the precise `(x, y) => type` function type.
 
 ### 29. The "unknown" Type
 
@@ -246,4 +283,4 @@ function combine(
 
 ### 31. Wrap Up
 
-### 32. Useful Resources & Links/
+### 32. Useful Resources & Links
