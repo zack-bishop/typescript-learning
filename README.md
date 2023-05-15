@@ -406,10 +406,33 @@ These links might also be interesting:
 
 ### 49. "let" and "const"
 * [https://kangax.github.io/compat-table/es6/](https://kangax.github.io/compat-table/es6/)
+* `const`: Constants, cannot be changed. 
+* `let`: A variable that can be changed, very similar to `var`.    
+* Why no use `var`?
+  * `var` has weird scope.  
+  * `let` has a more appropriate, easier to predict scope called `block scope`
 
-### 50. Arrow Functions
+### 50. Arrow Functions 
+* I've always been confused by this.  Looking forward to someone explaining it to me.
+* `(a: number, b: number) => {}` is the same as `function(a: number, b: number) => {}`
+```
+// The following are all the same.
+
+function(a: number, b: number) {
+  return a + b;
+}
+
+(a: number, b: number) => {
+  return a + b;
+}
+
+(a: number, b: number) => a + b; // has an implict return statement 
+```
+* There's some additional ways to shorten it, but that's making my brain hurt.
 
 ### 51. Default Function Parameters
+* `const add = (a: number, b: number = 1) => a + b;` <-- add a `= value` to the parameter to give it a default value and make it optional. 
+  * Just like PHP, the optional parameters must come last. 
 
 ### 52. The Spread Operator (...)
 
