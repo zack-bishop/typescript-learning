@@ -390,6 +390,33 @@ The following are VS Code plugins.  Not paying too much attention to this sectio
 * `Debugger for Chrome`
 
 ### 46. Wrap Up
+* nothing note worthy
 
 ### 47. Useful Resources & Links
+These links might also be interesting:
 
+* tsconfig Docs: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html
+* Compiler Config Docs: https://www.typescriptlang.org/docs/handbook/compiler-options.html
+* VS Code TS Debugging: https://code.visualstudio.com/docs/typescript/typescript-debugging
+
+## Section 4: Next-generation JavaScript & TypeScript
+
+### 48. Module Introduction
+* This module is about newish features of ES6.
+
+### 49. "let" and "const"
+* [https://kangax.github.io/compat-table/es6/](https://kangax.github.io/compat-table/es6/)
+
+### 50. Arrow Functions
+
+### 51. Default Function Parameters
+
+### 52. The Spread Operator (...)
+
+### 53. Rest Parameters 
+
+### 54. Array & Object Destructuring
+
+### 55. How Code Gets Compiled & Wrap Up
+
+### 56. Useful Resources & Links
