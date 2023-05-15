@@ -278,9 +278,65 @@ addAndHandle( 10, 20, result => {...});
 * Missed a question about the types.  I got it wrong, because I was assuming they meant literally `Function` as the type instead of the precise `(x, y) => type` function type.
 
 ### 29. The "unknown" Type
+* Kind of sounds like `any`.  
+* The main difference is that if you tried to assign a variable with a type of `unknown` to a `string`, TypeScript will yell at you.  If you use `any` however, TypeScript will let it proceed.   This is because `any` lets you do whatever you want.  Where as using `unknown` is a bit stricter.
+* Using `unknown` will require you to do type checks to assign an `unknown` value to a `string`.
+* while the above is helpful, it's better to use a union type if you aware of potential types.  In other words, if the value would be either a string or a number, use `string | number` instead of `unknown`.
 
 ### 30. The "never" Type
+* the `Never` type is used when a function does not return ever.  Basically, if the function is meant to crash the script, such as with error messaging, you'd set the return of a function to `: never`.
 
 ### 31. Wrap Up
+* My thoughts: 
+  * learned Tuples were a thing, 
+  * Union Types seem very useful
+  * Type Aliases seem very useful
 
 ### 32. Useful Resources & Links
+* just included links to project files. 
+
+## Section 3: The TypeScript Compiler (and its Configuration)
+
+### 33. Module Introduction
+* just introduced the module.  
+* Sounds like this is just going to be about how to set up NPM
+
+### 34. Using "Watch Mode"
+* You can watch a file with `tsc filename.ts --watch` or `tsc filename.ts -w`
+* You can close it with `CMD + C`.
+
+### 35. Compiling the Entire Project / Multiple Files
+* `tsc --init` <-- takes over the project.  adds tsconfig.json
+* after that, you can just run `tsc` to compile the project.
+* `tsc -w` or `tsc --watch` <-- watches all the TS files.
+
+### 36. Including & Excluding Files
+* use `@import filename`
+* at the end of the `tsconfig.json`, you can add `exclude` files you don't want to include in the complied TS. 
+  * Works with wildcards `**/*.dev.ts`
+  * you'll want to exclude `node_modules`
+    * Buuuut it's excluded by detault. But if you update `exclude`, you'll need to include `node_modules`
+  * `include` <-- if you use it, these are the __ONLY__ items that will be included within the compiled files
+
+### 37. Setting a Compilation Target
+
+### 38. Understanding TypeScript Core Libs
+
+### 39. More Configuration & Compilation Options
+
+### 40. Working with Source Maps
+
+### 41. rootDir and outDir
+
+### 42. Stop Emitting Files on Compliation Errors
+
+### 43. Strict Compliation
+
+### 44. Code Quality Options
+
+### 45. Debugging with Visual Studio Code
+
+### 46. Wrap Up
+
+### 47. Useful Resources & Links
+
