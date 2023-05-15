@@ -352,12 +352,42 @@ addAndHandle( 10, 20, result => {...});
 * `downlevelIteration`: Set to true if you want your code to work in older browsers.
 
 ### 42. Stop Emitting Files on Compilation Errors
+* `noEmitOnError`: Controls whether or not the JS file gets compiled when TypeScript encounters an error.  If set to `true` errors will prevent JS from compiling.
 
 ### 43. Strict Compilation
+* `noImplicitAny`: I understand this controls something related to `any`, but review this later as it's a bit fuzzy
+* `strictNullChecks`: This is how you inform TypeScript how to handle potential null values.  A good example of this is `const button = document.querySelector('button);`.  Normally, you'd have to include a `!` at the end to tell TypeScript that this thing will exist.  But if you enable this option, you wouldn't have to.
+  * you need an iffy check to get around this.  i.e. `if(button) {...}` 
+* `strictFunctionTypes`: Niche usage.  Advanced setting.
+* `strictBindCallApply`: affects how you bind, call, and apply things.
+  * `clickHandler.bind()`<-- `.bind` confuses me.  What does `.bind` do?  You use `.bind` to pass things into other functions?
+```
+const button = document.querySelector('button');
+
+function clickHandler(message: string) {
+  console.log('Clicked! ' + message);
+}
+
+if (button) {
+  button.addEventListener('click', clickHandler.bind(null, "You're welcome!")); //<-- .bind here is how you pass stuff to the clickHandlder function?
+}
+```
+* `strictPropertyInitialization`: Deals with classes?
+* `noImplicitThis`: Related to how `this` works in functions, maybe?
+* `alwaysStrict`: Adds `use strict;` to files.  What does this do?
 
 ### 44. Code Quality Options
+* `noUnusedLocals`: Enabling this will remind you to make sure every variable gets used.  TypeScript can only do this for local variables in functions
+* `noUnusedParameters`: Enabling this will force you to use all the function parameters. 
+* `noImplicitReturns`: Will give you an error if a function sometimes returns something, sometimes it doesn't.
+
+**NOTE: It looks like there's a lot more options in `tsconfig.json` than is in the video.
 
 ### 45. Debugging with Visual Studio Code
+The following are VS Code plugins.  Not paying too much attention to this section as I use PHPStorm.
+* `ES Lint`
+* `Prettier`
+* `Debugger for Chrome`
 
 ### 46. Wrap Up
 
