@@ -319,18 +319,41 @@ addAndHandle( 10, 20, result => {...});
   * `include` <-- if you use it, these are the __ONLY__ items that will be included within the compiled files
 
 ### 37. Setting a Compilation Target
+* This affects how the files are treated. 
+* `tsconfig.json => "target"`: You can set this to which version of JS you'd like TypeScript to output.
 
 ### 38. Understanding TypeScript Core Libs
+* `tsconfig.json => "lib"`: This affects what libraries are available to TypeScript
+  * If commented out, this will default to some some options determined the `target` setting and sets all DOM APIs as available. 
+  * default setup:
+```
+"lib": [
+  "dom",
+  "es6",
+  "dom.iterable",
+  "scripthost"
+]
+```
 
 ### 39. More Configuration & Compilation Options
+* `allowJs`: allows you to include regular javascript files
+* `checkJs`: error reporting
 
 ### 40. Working with Source Maps
+* helps with debugging and development
+* Allows browser to load and read the `.ts` files when using the console log.
+* Apparently Chrome allows you to add break points in the `.ts` files.
 
 ### 41. rootDir and outDir
+* `rootDir`: Allows you to set the root directory of your TS project files. 
+  * i.e. `src/ts` <-- if you wanted to keep your typescript files in an assets folder
+* `outDir`: the directory you'd like to output the compiled files into
+  * i.e. `dist/js`<-- if you wanted the output in the special directory.
+* `downlevelIteration`: Set to true if you want your code to work in older browsers.
 
-### 42. Stop Emitting Files on Compliation Errors
+### 42. Stop Emitting Files on Compilation Errors
 
-### 43. Strict Compliation
+### 43. Strict Compilation
 
 ### 44. Code Quality Options
 
