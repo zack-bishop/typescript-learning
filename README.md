@@ -595,22 +595,67 @@ console.log(`Department (${this.id}): ${this.name}`);
 
 ### Quiz 5: Classes
 * Missed a question regarding inheritance.  It was confusingly worded.
+### 72. A First Interface
+* interfaces describe the structure of an object.
+* `interface` only exists in TypeScript.
+* Appear to be very similar to custom types. Let's you rough out an object's structure / properties.
+
+### 73. Using Interfaces with Classes
+* Interfaces can only be used to describe the structure of an object.
+* Can you use union types within an interface? Answer: nope!
+* The main advantage of using an interface is clarity. 
+* Interfaces can be implemented inside a class
+* `class Person implments Greetable{}`
+* interfaces are used to share functionality across classes
+  * similar to abstract classes
+  * Difference is that interfaces don't have any implementation details at all
+  * Abstract classes can have some implementation details
+  * classes can implement more than one interface.
 
 ### 74. Why Interfaces?
+* useful when you have a certain set of functionalities that you want shared amoung classes.
+* useful to reinforce structure
 
 ### 75. Readonly Interface Properties
+* `readonly` is the only modifier you can use on properties within interfaces
 
 ### 76. Extending Interfaces
+* Interfaces can extend other interfaces. 
+* This is a useful way to include and build upon common functionality.
 
 ### 77. Interfaces as Function Types
+* Since functions are essentially objects, you can use interfaces with functions.
+```
+interface AddFn {
+  (a: number, b: number): number // () contains the arguments, : number is the return type
+}
+```
 
 ### 78. Optional Parameters & Properties
+* You can include option properties like this:
+```
+interface Named {
+  readonly name: string;
+  outputName?: string // the ? makes it optional
+}
+```
+* You can mark methods as optional like this:
+```
+interface Named {
+  myMethod?(){...} // the ? comes before the paranethesis. 
+}
+```
+* You can include option properties and methods in classes (I wonder if this is limited to classes that extend the interfaces)
 
 ### 79. Compiling Interfaces to JavaScript
+* Interesting.  Interfaces don't get compiled. 
+* Interfaces are pure development feature.
 
 ### Quiz 6: Interfaces
+* aced that shit
 
 ### 80. Wrap Up
+* Interfaces = Pure TypeScript
 
 ### 81. Useful Resources & Links.
 
