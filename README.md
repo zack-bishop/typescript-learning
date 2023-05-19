@@ -407,6 +407,7 @@ These links might also be interesting:
 ### 49. "let" and "const"
 * [https://kangax.github.io/compat-table/es6/](https://kangax.github.io/compat-table/es6/)
 * `const`: Constants, cannot be changed. 
+  * One exception is if the `const` is an array or object.  You can `.push` to arrays or objects.
 * `let`: A variable that can be changed, very similar to `var`.    
 * Why no use `var`?
   * `var` has weird scope.  
@@ -435,11 +436,127 @@ function(a: number, b: number) {
   * Just like PHP, the optional parameters must come last. 
 
 ### 52. The Spread Operator (...)
+* the spread operator "speads out" an array.  For instance:
+```
+const hobbies = ['Sports', 'Cooking'];
+const activeHobbies = ['Hiking'];
+
+activeHobbies.push(...hobbies) // <-- this will add all the items to the activeHobbies array.
+```
+* another usage:
+```
+const copiedPerson = { ...person } // <-- this will create a new object of an existing object instead of just creating a reference of it.
+```
 
 ### 53. Rest Parameters 
+* kind of related to spread operator.
+```
+const add = (...numbers:number) => { //<-- this will allow you to add as many parameters as you want to a function.
+  return numbers.reduce((curResult, curValue) => {
+    return curResults + curValue;  
+  }, 0);
+}
+```
+* `.reduce()` looks interesting, learn more about it.
 
 ### 54. Array & Object Destructuring
+* For arrays: `const [ hobby1, hobby2, ...remainingHobbies] = hobbies` <-- this pulls out hobbies for `hobby` and `hobby2`, then the remaining hobbies get lumped together in `remainingHobbies`.  
+  * This respects the order of the items in the originial array.  i.e. `hobby1 = hobbies[0]`, `hobby2 = hobbies[1]`, etc.
+* For objects: `const { firstName, age, } = person;` <-- this pulls out specific properties of an object.  
+  * This doesn't care about the order of the object.
+  * You can rewrite the name of the property in the new `const` like this `const { oldName: newName } = person`
 
 ### 55. How Code Gets Compiled & Wrap Up
+* This is just a reminder that you can dictate which version of JavaScript you'd like your code to be compiled into.
 
 ### 56. Useful Resources & Links
+* Just contained links to the project files.
+
+## Section 5: Classes & Interfaces
+
+### 57. Module Introduction
+* Quick intro over what we'll covering.
+
+### 58. What are Classes?
+* OOP => Object-oriented Programming
+  * Work with (real-life) Entities in your Code
+* Difference between `Objects` and `Classes`?
+  * `Objects` -> Concrete things we work with in code.
+    * `Objects` -> instances of a class
+  * `Classes` -> Blueprints for Objects
+    * Classes define what objects look like, which properties and methods they have.
+    * Exist to speed up the creating of objects.  
+    * Make it easier to create multiple similar objects
+
+### 59. Creating a First Class
+
+### 60. Compiling to JavaScript
+
+### 61. Constructor Functions & The "this" Keyword
+
+### 62. "private" and "public" Access Modifiers
+
+### 63. Shorthand Initialization
+
+### 64. "readonly" Properties
+
+### Quiz 4: Class Basics
+
+### 65. Inheritance
+
+### 66. Overriding Properties & The "protected" Modifier
+
+### 67. Getters & Setters
+
+### 68. Static Methods & Properties
+
+### 69. Abstract Classes
+
+### 70. Singletons & Private Constructors
+
+### 71. Classes - A Summary
+
+### Quiz 5: Classes
+
+### 74. Why Interfaces?
+
+### 75. Readonly Interface Properties
+
+### 76. Extending Interfaces
+
+### 77. Interfaces as Function Types
+
+### 78. Optional Parameters & Properties
+
+### 79. Compiling Interfaces to JavaScript
+
+### Quiz 6: Interfaces
+
+### 80. Wrap Up
+
+### 81. Useful Resources & Links.
+
+## Section 6: Advanced Types
+
+## Section 7: Generics
+
+## Section 8: Decorators
+
+## Section 9: Practice Time! Let's build a Drag & Drop Project
+
+## Section 10: Modules & Namespaces
+
+## Section 11: Using Webpack with TypeScript
+
+## Section 12: 3rd Party Libraries & TypeScript
+
+## Section 13: Time to Practice!  Let's build a "Select & Share a Place" App (incl. Google Maps)
+
+## Section 14: React.js & TypeScript
+
+## Section 15: Node.js + Express & TypeScript
+
+## Section 16: Course Roundup
+
+
+
