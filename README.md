@@ -489,10 +489,26 @@ const add = (...numbers:number) => { //<-- this will allow you to add as many pa
     * Make it easier to create multiple similar objects
 
 ### 59. Creating a First Class
+* use `class` to define a class
+
+```
+class Department { // use class to define a class
+    name: string; // this is a poperty of the class, don't have to use const or let
+    constructor(n: string) { // constructor method of class.
+        this.name = n;
+    }
+} 
+
+const accounting = new Deparment('Accounting'); // how a new instance of the class is created.
+```
 
 ### 60. Compiling to JavaScript
+* This video shows how TypeScript gets compiled
+* In `ES6`, the JS looks pretty similar
+* For `ES5`, the JS uses older workarounds
 
 ### 61. Constructor Functions & The "this" Keyword
+
 
 ### 62. "private" and "public" Access Modifiers
 
