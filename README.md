@@ -571,14 +571,30 @@ console.log(`Department (${this.id}): ${this.name}`);
   * In other words, never use `()` when trying to access it
 
 ### 68. Static Methods & Properties
+* `static` => use this modifier to access properties and methods without having to declare a new instance of it.
+  * i.e. `Math.PI` <-- you didn't have to write `new Math` to access the PI method.
+  * One thing to note: if a property or method is static, then it can't be accessed by using `this` within the class itself.
 
 ### 69. Abstract Classes
-
+* `abstract` => used when on the base class to define a method or property and then force classes that extend this class to overwrite it. 
+  * If you set a method to `abstract`, the whole class will need the `abstract` keyword.
+  * Useful if you want make sure any inherited classes use the same functionality / properties.
+  
 ### 70. Singletons & Private Constructors
-
+* `singleton` => use this if you want only one instance of a class. to use it:
+  * Set the constructor to `private`.
+  * Set an `isntance` property on the class.
+  * Set a method `getInstance` inside the class that checks if that property is set
+    * if it's set, return the property
+    * If it's not set, create a new instance and return it. 
+  * Outside of the class, to get the instance, use `Object.getInstance`
+  * This is pretty confusing.
+  
 ### 71. Classes - A Summary
+* review of the classes lectures.
 
 ### Quiz 5: Classes
+* Missed a question regarding inheritance.  It was confusingly worded.
 
 ### 74. Why Interfaces?
 
