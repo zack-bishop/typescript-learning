@@ -552,8 +552,15 @@ console.log(`Department (${this.id}): ${this.name}`);
 * Aced that shit.
 
 ### 65. Inheritance
+* use `extends` to extend a class.
+* When extending a class, if you overwrite the constructor, you have to use `super()` inside the constructor.
+  * You have to pass the parameters that the original constructor required through super, i.e. `super(id, name)`.
+  * `super()` has to come first before any `this` usages.
 
 ### 66. Overriding Properties & The "protected" Modifier
+* You can override Properties and Methods. 
+* However, `private` methods and properties are not available when extending a class.
+* `protected` => it is like `private`, but is available to classes that extend from the original. 
 
 ### 67. Getters & Setters
 

@@ -23,16 +23,43 @@ class Department {
     }
 }
 
-const accounting = new Department('a1', 'Accounting');
+class ITDepartment extends Department {
+    admins: string[];
+    constructor(id: string, admins: string[]) {
+        super(id, 'IT');
+        this.admins = admins;
 
-accounting.addEmployee('Max');
-accounting.addEmployee('Zack');
+    }
+}
+
+class AccountingDepartment extends Department {
+    constructor(id: string, private reports: string[]) {
+        super(id, 'Accounting');
+    }
+
+    addReport(text: string) {
+        this.reports.push(text);
+    }
+
+    printReports() {
+        console.log(this.reports);
+    }
+}
+
+
+
+
+
+const it = new ITDepartment('a1', ['Max']);
+
+it.addEmployee('Max');
+it.addEmployee('Zack');
 
 //accounting.employees[2] = 'Bob'; <-- wont work because we set `employees` to private
-console.log(accounting);
-accounting.describe();
-accounting.printEmployeeInformation();
+console.log(it);
 
-// const accountingCopy = { name: 'Dummy', describe: accounting.describe};
-//
-// accountingCopy.describe();
+const accounting = new AccountingDepartment('d2', ['report1', 'report2']);
+
+accounting.addReport('Something went wrong');
+
+console.log(accounting);
