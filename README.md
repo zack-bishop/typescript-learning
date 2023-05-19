@@ -563,6 +563,12 @@ console.log(`Department (${this.id}): ${this.name}`);
 * `protected` => it is like `private`, but is available to classes that extend from the original. 
 
 ### 67. Getters & Setters
+* `get` => use this modifier to write a function that gets properties of the class.
+  * Useful when a property is set to `private`
+* `set` => use this modifier to write a function that sets a property
+  * What's interesting is you can use the same name for get and set properties.
+* both `get` and `set` are accessed like properties, not methods
+  * In other words, never use `()` when trying to access it
 
 ### 68. Static Methods & Properties
 
