@@ -508,15 +508,48 @@ const accounting = new Deparment('Accounting'); // how a new instance of the cla
 * For `ES5`, the JS uses older workarounds
 
 ### 61. Constructor Functions & The "this" Keyword
+* `this` usually refers to the thing that's responsible for calling the method.
+* In general, if you're using `this` in a method within a class, it's a good idea to include it as a parameter, i.e.:
 
+```
+describe(this: Department) {
+  console.log('Department: `, this.name);
+}
+```
 
 ### 62. "private" and "public" Access Modifiers
+* use `private` to make a property within a class editable only by methods within that class. 
+* `public` properties are accessible from outside as well.
+* `private` properties are new.  They're introduced in TypeScript.
+* In general `private` helps you to keep your code cleaner.
 
 ### 63. Shorthand Initialization
+* you can create properties on a class within the constructor.
+```
+constructor(private id: string, private name; string) {}
+```
+replaces
+```
+private id:  string;
+private name: string;
+
+constructor(id: string, name: string) {
+  this.id = id;
+  this.name = name;
+}
+```
+* New stuff: 
+```
+console.log(`Department (${this.id}): ${this.name}`);
+```
 
 ### 64. "readonly" Properties
+* `readonly` is useful if the property never needs to be changed.
+  * Probably will be useful for `id`s.
+* **NOTE: look into .prototype** this is something I've needed to do for years.
 
 ### Quiz 4: Class Basics
+* Aced that shit.
 
 ### 65. Inheritance
 
