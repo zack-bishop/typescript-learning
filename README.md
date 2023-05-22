@@ -787,12 +787,27 @@ function add(a: string, b: string): string {...}
 ### 94. Built-in Generics & What are Generics
 * Arrays are a type of "Generic"
 * Anytime you see this syntax `Array<T>` you're dealing with a generic.
+* `Promize<string>` is another Generic Type
+  * You suck at Promises Zack, research them.
+* In general, using generics will give you more type safety.
 
 ### 95. Creating a Generic Function
+* WTF is `Object.assign`?
+  * `Object.assign` <-- merges objects
+```
+function merge<T, U>(objA: T, objB: U) {...}
+```
+* the above is useful because it gives more information about the objects passing into the function.
+* This section was as clear as mud to me.
 
 ### 96. Working with Constraints
+```
+function merge<T, U>(objA: T extends object, objB: U extends object) {...}
+```
+* Extending the generic types in the above will make your functions more robust.
 
 ### 97. Another Generic Function
+
 
 ### 98. The "keyof" Constraint
 
