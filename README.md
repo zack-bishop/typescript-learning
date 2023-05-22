@@ -658,8 +658,111 @@ interface Named {
 * Interfaces = Pure TypeScript
 
 ### 81. Useful Resources & Links.
+These links might also be interesting:
+
+* More on (JS) Classes: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
+* More on TS Interfaces: [https://www.typescriptlang.org/docs/handbook/2/objects.html](https://www.typescriptlang.org/docs/handbook/2/objects.html)
 
 ## Section 6: Advanced Types
+
+### 82. Module Introduction
+* brief introduction to project
+
+### 83. Intersection Types 
+* you can use two types when instaniating a thing
+```
+type Admin = {...};
+
+type Employee = {...};
+
+type ElevatedEmployee = Admin & Employee;
+
+```
+
+* this is interesting:
+```
+type Combinable = string | number;
+type Numeric = number | boolean;
+
+type Universal = Combinable & Numeric;
+```
+* In the above, the intersection would be numeric, meaning Universal would be of type `numeric` since `numeric` was the only one present in both (need to confirm this)
+
+### 84. More on Type Guards
+* A way to check for a property when the type of an object is unclear:
+```
+if('privileges' in emp) {...}
+```
+* `instanceof` <= good way to check the type of an object / class.  is in vanilla JavaScript
+```
+if(vehicle instanceof Truck) {...}
+```
+
+### 85. Discriminated Unions
+* basically, you include a literal type (i.e. `type: 'bird'`) when using unioned interfaces
+* This type can be used to as a type guard
+
+```
+interface Bird {
+  type: 'bird',
+  ...
+}
+
+interface Horse {
+  type: 'horse,
+}
+
+type Animal = Bird | Horse;
+
+function foo(animal: Animal) {
+  switch(animal.type) {
+    case 'bird':
+      ...
+    case 'horse:
+      ...
+  }
+} 
+```
+
+### 86. Type Casting
+* Type casting is useful when getting elements from the DOM. 
+* TypeScript doesn't know what anything about the markup.
+* Two ways to do this:
+  * `const input = <HTMLInputElement>document.getElementById('input')!;` <-- might clash with React
+  * `const input = document.getElementById('input')! as HTMLInputElement;` <-- doesn't clash with react
+* **Reminder: `!` after an expression tells TypeScript it will never yield null**
+* Interesting Syntax:
+```
+const input = document.getElementById('input')! as HTMLInputElement;
+
+if(input) {
+  (input as HTMLInputElement).value = 'Hi there!';
+}
+```
+
+### 87. Index Properties
+* Index Types: Allows us to be more flexible.
+* Good for instances where you don't know the number of properties you'll have.
+```
+interface ErrorContainer {
+  [prop: string]: string 
+}
+```
+* In the above, `[prop: string]` <-- this means you don't know how many props you'll have but they'll have a name that's a string.
+* In the above, `: string` <-- this defines the type of the properties.
+* You can still add other props, but they must be of the same type as the index type.
+
+### 88. Function Overloads
+
+### 89. Optional Chaining
+
+### 90. Nullish Coalescing
+
+### Quiz 7: Advanced Types
+
+### 91: Wrap up
+
+### 92: Useful Resources & Links
 
 ## Section 7: Generics
 
