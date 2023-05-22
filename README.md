@@ -753,8 +753,15 @@ interface ErrorContainer {
 * You can still add other props, but they must be of the same type as the index type.
 
 ### 88. Function Overloads
-
+* Define multiple functional parameters.
+```
+function add(a: number, b: number): number;
+function add(a: string, b: string): string {...}
+```
+* in the above, you can basically declare the function twice with different parameters / return type.
+  
 ### 89. Optional Chaining
+
 
 ### 90. Nullish Coalescing
 
