@@ -761,17 +761,52 @@ function add(a: string, b: string): string {...}
 * in the above, you can basically declare the function twice with different parameters / return type.
   
 ### 89. Optional Chaining
-
+* Not sure something is defined, use the optional chaining character: `?`
+* `console.log(fetchedUserData?.job.title);`
+* `foo?.bar`<-- the chaining operator checks the thing in front of the question the mark. 
 
 ### 90. Nullish Coalescing
+* `const storedData = userInput ?? 'DEFAULT'`<-- the double checkmarks checks to see if the value is `null` or `undefined`.  an empty value, i.e. `userInput = ''` would pass. 
+* This is useful if you want to keep that empty value and not overwrite it.
 
 ### Quiz 7: Advanced Types
+* Missed a question about typecasting.
 
 ### 91: Wrap up
+* Wrapping up
 
 ### 92: Useful Resources & Links
+* These links might also be interesting:
+* More on Advanced Types: https://www.typescriptlang.org/docs/handbook/2/types-from-types.html
 
 ## Section 7: Generics
+
+### 93. Module Introduction
+* Intro
+
+### 94. Built-in Generics & What are Generics
+* Arrays are a type of "Generic"
+* Anytime you see this syntax `Array<T>` you're dealing with a generic.
+
+### 95. Creating a Generic Function
+
+### 96. Working with Constraints
+
+### 97. Another Generic Function
+
+### 98. The "keyof" Constraint
+
+### 99. Generic Classes.
+
+### 100. A First Summary
+
+### 101. Generic Utility Types 
+
+### 102. Generic Types vs. Union Types
+
+### Quiz 8: Generics
+
+### 102. Useful Resources & Links.
 
 ## Section 8: Decorators
 
