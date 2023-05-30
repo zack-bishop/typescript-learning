@@ -1009,6 +1009,14 @@ class Product {
 
 ## Section 9: Practice Time! Let's build a Drag & Drop Project
 
+### 121. Getting Started
+* `<template>` <-- interesting HTML tag, look into it
+* `HTMLTemplateElement` <-- new type
+* `HTMLDivElement` <-- new type
+* Question: When should you use `<HTMLElement>` vs `as HTMLElement`
+* `document.importNode()` <--- new JS command
+* `this.hostElement.insertAdjacentElement` <-- new JS command
+
 ## Section 10: Modules & Namespaces
 
 ## Section 11: Using Webpack with TypeScript
