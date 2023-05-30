@@ -1029,6 +1029,11 @@ class Product {
 * Need to circle back to decorators.
 
 ### 125. Fetching User Input 
+
+### 126. Creating a Re-Usable Validation Functionality
+* `isValid = isValid && validatableInput.value.toString().trim().length !== 0;`<-- the `isValid = isValid && XYZ` syntax confuses me a bit.
+
+### 127. Rendering Project Lists
 * 
 
 ## Section 10: Modules & Namespaces
