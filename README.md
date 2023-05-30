@@ -1008,14 +1008,21 @@ class Product {
 ### 115. Validation with Decorators - Fist Steps
 
 ## Section 9: Practice Time! Let's build a Drag & Drop Project
+### 121. Module Intro
 
-### 121. Getting Started
+### 122. Getting Started
 * `<template>` <-- interesting HTML tag, look into it
 * `HTMLTemplateElement` <-- new type
 * `HTMLDivElement` <-- new type
 * Question: When should you use `<HTMLElement>` vs `as HTMLElement`
 * `document.importNode()` <--- new JS command
 * `this.hostElement.insertAdjacentElement` <-- new JS command
+* `importedNode.firstElementChild` <-- new JS
+
+### 123. Interacting with DOM Elements
+* `this.element.id = 'user-input';` <-- huh.  In the past, I feel like I had to do something like `element.attr('id) = 'something'`
+* This video has a good example of when `this` breaks
+* Solution: `this.submitHandler.bind(this)` <-- God, you ugly JS
 
 ## Section 10: Modules & Namespaces
 
