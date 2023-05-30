@@ -842,16 +842,170 @@ const numberStorage = new DataStorage<number>();
 * so much to unpack in the above.
 * **note: Look into the difference between primitives and reference values**.
 ### 100. A First Summary
+* Generics vive us flexibly plus type safety.
 
 ### 101. Generic Utility Types 
+* [Utility Types](https://www.typescriptlang.org/docs/handbook/utility-types.html)
+* Some examples
+  * `Partial` <-- useful to do things "step by step" by setting all the properties to being optional. 
+    * `let courseGoal: Partial<CourseGoal> = {}`
+    * Can't return partials, need to convert them when ready to return it
+  * `Readonly` <-- 
+    * `const names: Readonly<string[]> = [...]`
+    * WTF is `.pop()`? You can remove something with it?  Googled it.  Sounds like you can use this to remove the last element in an array.
 
 ### 102. Generic Types vs. Union Types
+* Generic types are a bit stricter when it comes to types.
 
 ### Quiz 8: Generics
+* Aced that shit
 
 ### 102. Useful Resources & Links.
+*Generics: https://www.typescriptlang.org/docs/handbook/generics.html
 
 ## Section 8: Decorators
+### 104. Module Introduction
+* Decorators are more for other developers working on the code. 
+* more for "meta programming"
+### 105. A First Class Decorators
+* updates to `tsconfig.json` to use decorators
+  * `tsconfig.json` to `ES6` 
+  * `experimentalDecorators: true`
+* decorators start with a capital letter
+
+```
+function Logger(constructor: Function) {
+  console.log('Logging...');
+  console.log(constructor);
+}
+
+@Logger
+class Person {
+  name = 'Max';
+
+  constructor() {
+    console.log('Creating person object...');
+  }
+}
+
+const pers = new Person();
+
+console.log(pers);
+```
+
+### 106. Working with Decorator Factories.
+* Here's how you can make these more flexible:
+```
+function Logger(logString: string) {
+  return function(constructor: Function) {
+    console.log(logString);
+    console.log(constructor);
+  };
+}
+
+@Logger('LOGGING - PERSON')
+class Person {
+  name = 'Max';
+
+  constructor() {
+    console.log('Creating person object...');
+  }
+}
+
+const pers = new Person();
+
+console.log(pers);
+```
+
+### 107. Building More Useful Decorators
+* This section confused me.  At first they said that decorators were meta programming.  However, the examples are writing a bunch of content to the DOM. 
+* The "line in the sand" is that we're writing the decorators for other developers? 
+### 108. Adding Multiple Decorators
+* Render bottom up
+### 109. Diving into Property Decorators
+* one thing to note: Decorators will run when JS is ran, not necessarily when the class in instantiated.
+```
+function Log(target: any, propertyName: string | Symbol) {
+  console.log('Property decorator!');
+  console.log(target, propertyName);
+}
+
+class Product {
+  @Log
+  title: string;
+  private _price: number;
+}
+
+```
+### 110 Accessor & Parameter Decorators
+```
+function Log(target: any, propertyName: string | Symbol) {
+  console.log('Property decorator!');
+  console.log(target, propertyName);
+}
+
+function Log2(target: any, name: string, descriptor: PropertyDescriptor) {
+  console.log('Accessor decorator!');
+  console.log(target);
+  console.log(name);
+  console.log(descriptor);
+}
+
+function Log3(
+  target: any,
+  name: string | Symbol,
+  descriptor: PropertyDescriptor
+) {
+  console.log('Method decorator!');
+  console.log(target);
+  console.log(name);
+  console.log(descriptor);
+}
+
+function Log4(target: any, name: string | Symbol, position: number) {
+  console.log('Parameter decorator!');
+  console.log(target);
+  console.log(name);
+  console.log(position);
+}
+
+class Product {
+  @Log
+  title: string;
+  private _price: number;
+
+  @Log2
+  set price(val: number) {
+    if (val > 0) {
+      this._price = val;
+    } else {
+      throw new Error('Invalid price - should be positive!');
+    }
+  }
+
+  constructor(t: string, p: number) {
+    this.title = t;
+    this._price = p;
+  }
+
+  @Log3
+  getPriceWithTax(@Log4 tax: number) {
+    return this._price * (1 + tax);
+  }
+}
+
+```
+### 111. When Do Decorators Execute?
+* Decorators on a class execute when you define a class.
+* Decorators are basically fired when things are defined, which will allow you to set up things before the user does stuff / does stuff behind the scenes.
+
+### 112. Returning (an changing) a Class in a Class Decorator
+
+### 113. Other Decorator Return Types
+
+### 114. Example: Creating an "Autobind" Decorating.
+
+### 115. Validation with Decorators - Fist Steps
 
 ## Section 9: Practice Time! Let's build a Drag & Drop Project
 
