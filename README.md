@@ -1024,6 +1024,13 @@ class Product {
 * This video has a good example of when `this` breaks
 * Solution: `this.submitHandler.bind(this)` <-- God, you ugly JS
 
+### 124. Creating & Using an "Autobind" Decorator
+* useful example of a decorator
+* Need to circle back to decorators.
+
+### 125. Fetching User Input 
+* 
+
 ## Section 10: Modules & Namespaces
 
 ## Section 11: Using Webpack with TypeScript
