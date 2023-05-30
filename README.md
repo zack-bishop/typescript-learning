@@ -807,12 +807,40 @@ function merge<T, U>(objA: T extends object, objB: U extends object) {...}
 * Extending the generic types in the above will make your functions more robust.
 
 ### 97. Another Generic Function
-
+* This video really confused me.  He created an interface that has a `length` property.  So if he passes in a string or an array -- which already have a length property -- JS will just apparently convert it for him? 
 
 ### 98. The "keyof" Constraint
-
+```function extractAndConvert<T extends object, U extends keyof T>(...)```
+* I feel like this is very useful albeit very esoteric.  
+ 
 ### 99. Generic Classes.
+```
+class DataStorage<T extends string | number | boolean> {
+  private data: T[] = [];
 
+  addItem(item: T) {
+    this.data.push(item);
+  }
+
+  removeItem(item: T) {
+    if (this.data.indexOf(item) === -1) {
+      return;
+    }
+    this.data.splice(this.data.indexOf(item), 1); // -1
+  }
+
+  getItems() {
+    return [...this.data];
+  }
+}
+
+// Use the generic storage class to create new storage classes 
+const textStorage = new DataStorage<string>();
+const numberStorage = new DataStorage<number>();
+
+```
+* so much to unpack in the above.
+* **note: Look into the difference between primitives and reference values**.
 ### 100. A First Summary
 
 ### 101. Generic Utility Types 
