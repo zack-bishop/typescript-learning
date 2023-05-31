@@ -1049,6 +1049,7 @@ class Product {
 * Need to revisit what an `enum` is
 
 ### 130. Filtering Projects with Enums
+* I really need to master the function shorthand.
 
 ## Section 10: Modules & Namespaces
 
