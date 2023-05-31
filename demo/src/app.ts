@@ -1,5 +1,15 @@
-// Validation
+// Project State Management
+class ProjectState {
+    private projects: any[] = [
 
+    ];
+
+    addProject(title: string, description: string, numOfPeople: number) {
+
+    }
+}
+
+// Validation
 interface Validatable {
     value: string | number;
     required?: boolean;
@@ -54,11 +64,38 @@ function autobind(_: any, _2: string, descriptor: PropertyDescriptor) {
 }
 
 
+class ProjectList {
+    templateElement: HTMLTemplateElement;
+    hostElement: HTMLDivElement;
+    listElement: HTMLElement;
+    constructor(private type: 'active' | 'finished' ) {
+        this.templateElement = document.getElementById('project-list')! as HTMLTemplateElement;
+        this.hostElement = document.getElementById('app')! as HTMLDivElement;
+
+        const importedNode = document.importNode(this.templateElement.content, true);
+        this.listElement = importedNode.firstElementChild as HTMLElement;
+        this.listElement.id = `${this.type}-projects`;
+        this.attach();
+        this.renderContent();
+    }
+
+    private renderContent() {
+        const listId = `${this.type}-projects-list`;
+
+        this.listElement.querySelector('ul')!.id = listId;
+        this.listElement.querySelector('h2')!.innerHTML = this.type.toUpperCase() + ' Projects';
+    }
+
+    private attach() {
+        this.hostElement.insertAdjacentElement('beforeend', this.listElement);
+    }
+}
+
 class ProjectInput {
 
     templateElement: HTMLTemplateElement;
     hostElement: HTMLDivElement;
-    formElement: HTMLElement;
+    formElement: HTMLFormElement;
     titleInputElement: HTMLInputElement;
     descriptionInputElement: HTMLInputElement;
     peopleInputElement: HTMLInputElement;
@@ -92,13 +129,13 @@ class ProjectInput {
         const descriptionValidatable: Validatable = {
             value: enteredDescription,
             required: true,
-            minLength: 1
+            minLength: 1,
         };
         const peopleValidatable: Validatable = {
             value: +enteredPeople,
             required: true,
             min: 1,
-            max: 5
+            max: 5,
         };
 
         if (
@@ -122,26 +159,30 @@ class ProjectInput {
     @autobind
     private submitHandler(event: Event) {
         event.preventDefault();
-        console.log('submitted');
 
         const userInput = this.gatherUserInput();
 
         if(Array.isArray(userInput)) {
             const [title, desc, people] = userInput;
-            console.log(title, desc, people);
+
+
+
+
+
+
             this.clearInputs();
         }
     }
 
     private configure() {
-        console.log('configured');
         this.formElement.addEventListener('submit', this.submitHandler);
     }
 
     private attach() {
-        console.log('attached');
         this.hostElement.insertAdjacentElement('afterbegin', this.formElement);
     }
 }
 
 const prjInput = new ProjectInput();
+const activeProjectList = new ProjectList('active');
+const finishedProjectList = new ProjectList('finished');

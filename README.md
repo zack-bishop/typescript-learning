@@ -1029,12 +1029,15 @@ class Product {
 * Need to circle back to decorators.
 
 ### 125. Fetching User Input 
+* pretty straightforward section.  Nothing to note here.
 
 ### 126. Creating a Re-Usable Validation Functionality
 * `isValid = isValid && validatableInput.value.toString().trim().length !== 0;`<-- the `isValid = isValid && XYZ` syntax confuses me a bit.
 
 ### 127. Rendering Project Lists
-* 
+* `${variable}` <-- need to look into when to use this more, forget what it's called.
+
+### 128. Managing Application States with Singletons
 
 ## Section 10: Modules & Namespaces
 
