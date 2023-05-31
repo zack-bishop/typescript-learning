@@ -1063,6 +1063,7 @@ class Product {
 * look into why `new ProjectItem(this.element.querySelector('ul')!.id, projectItem);` renders correctly.  I don't udnerstand how it just creates a new element and it shows up
 
 ### 133. Using a Getter
+* `template literals` <-- this is the specific term for `${this.variable}` usage;
 
 ### 134. Utilizing Interfaces to Implement Drag & Drop
 
