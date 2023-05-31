@@ -1012,6 +1012,8 @@ class Product {
 
 ### 122. Getting Started
 * `<template>` <-- interesting HTML tag, look into it
+  * Dig the usage of this.  Basically, you can include this tag and modern browsers know not to render it.
+  * instead, it can be targeted via Javascript and used within Apps
 * `HTMLTemplateElement` <-- new type
 * `HTMLDivElement` <-- new type
 * Question: When should you use `<HTMLElement>` vs `as HTMLElement`
@@ -1052,10 +1054,13 @@ class Product {
 * I really need to master the function shorthand.
 ### 131. Adding Inheritance & Generics
 * `Component` <-- common term for UI components in react and angular
+* `super()` <-- need to use this when extending abstract classes
+* `protected` <-- similar to `private` but can be overwritten
 
 ### 132. Rendering Project Items with a Class
-* `super()` <-- need to use this when extending abstract classes
-* `protected` <-- simpilar to `private` but can be overwritten
+* I always struggle with the inherited properties.
+* in this example, it took me awhile to recall that when a class extended the `Component` class, it didn't need to insantiate the `element` property.
+* look into why `new ProjectItem(this.element.querySelector('ul')!.id, projectItem);` renders correctly.  I don't udnerstand how it just creates a new element and it shows up
 
 ### 133. Using a Getter
 
