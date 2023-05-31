@@ -1038,7 +1038,14 @@ class Product {
 * `${variable}` <-- need to look into when to use this more, forget what it's called.
 
 ### 128. Managing Application States with Singletons
+* this section confused the crap out of me.
+* Research more about `state management`.
+* so much to unpack with this video!
+* `for (const listernFn of this.listeners) {...}` <-- not sure if I've seen this syntax before
+* `.slice()` <-- I know I've seen this, but I've forgotten about it before.
+* dang.  The author uses `any` all over the place.  Thought it was supposed to be bad?
 
+### 129. 
 ## Section 10: Modules & Namespaces
 
 ## Section 11: Using Webpack with TypeScript
