@@ -1045,7 +1045,11 @@ class Product {
 * `.slice()` <-- I know I've seen this, but I've forgotten about it before.
 * dang.  The author uses `any` all over the place.  Thought it was supposed to be bad?
 
-### 129. 
+### 129. More Classes & Custom Types
+* Need to revisit what an `enum` is
+
+### 130. Filtering Projects with Enums
+
 ## Section 10: Modules & Namespaces
 
 ## Section 11: Using Webpack with TypeScript
