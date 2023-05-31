@@ -1050,6 +1050,26 @@ class Product {
 
 ### 130. Filtering Projects with Enums
 * I really need to master the function shorthand.
+### 131. Adding Inheritance & Generics
+* `Component` <-- common term for UI components in react and angular
+
+### 132. Rendering Project Items with a Class
+* `super()` <-- need to use this when extending abstract classes
+* `protected` <-- simpilar to `private` but can be overwritten
+
+### 133. Using a Getter
+
+### 134. Utilizing Interfaces to Implement Drag & Drop
+
+### 135. Drag Events & Reflecting the Current State in the UI
+
+### 136. Adding a Droppable Area
+
+### 137. Finishing Drag & Drop
+
+### 138. Wrap Up
+
+### 139. Useful Resources & Links
 
 ## Section 10: Modules & Namespaces
 
