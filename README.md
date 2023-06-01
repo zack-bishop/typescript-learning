@@ -1106,7 +1106,8 @@ class Product {
 * `export` <-- this keyword makes stuff inside of namespace available outside of file
 * `/// <reference path="drag-drop.ts" />` <-- this is some ugly-ass import
 * This shit seems wonky. 
-* [See my changes](https://github.com/zack-bishop/typescript-learning/commit/cddb2fb287037d06d9d1a02f6adf5998c7a74857#diff-8458772b1cddc9e704ec163cdff381b8b07575a535bce01dd41bb5b76b931868L5) to the `tsconfig.json` file to compile everything into one file. 
+* [See my changes](https://github.com/zack-bishop/typescript-learning/commit/cddb2fb287037d06d9d1a02f6adf5998c7a74857#diff-8458772b1cddc9e704ec163cdff381b8b07575a535bce01dd41bb5b76b931868L5) to the `tsconfig.json` file to compile everything into one file.
+* In general, this approach is not recommended as TypeScript doesn't handle these imports very well.  For instane, if a required file isn't imported, TypeScript won't throw an error.
 
 ### 143. Organizing Files & Folders
 * still a bit confused when things need `export` versus when they don't
@@ -1117,8 +1118,13 @@ class Product {
 * In otherwords, instead of importing everything in the `app.ts`, only import what you need in that specific file.  Then, in each of those files, specify what each of those files needs.
 
 ### 145. Important: Use Chrome or Firefox
+* wonder if this is still a thing?
 
 ### 146. Using ES Modules
+* These imports look a lot more familiar to me.
+* `defer` <-- look into what this does on a script
+* `type="module"` <-- look into this
+* This method is the recommended method.  It allows TypeScript to detect errors.
 
 ### 147. Understanding various Import & Export Syntaxes
 
