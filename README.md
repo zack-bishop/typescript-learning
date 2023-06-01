@@ -1082,10 +1082,47 @@ class Product {
 * `.slice()` <-- I know I've mentioned this one before, but you need to look into this one again.
 
 ### 138. Wrap Up
+* nothing noteworthy
 
 ### 139. Useful Resources & Links
+* [More on Drag & Drop](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
 
 ## Section 10: Modules & Namespaces
+### 140. Module Introduction
+* Just a quick intro
+
+### 141. Writing Module Code - Your Options
+* Options to split code up
+1. Namespaces & File Bundling
+   * use "namespace" code syntax to group code
+   * per-file or bundled compilation is possible (less imports to manage)
+2. ES6 Imports / Exports
+   * Modern JS supports this out of the box
+   * Use EX import / export syntax
+   * per-file compilation but single <script> import
+
+### 142. Working with Namespaces
+* `namespace DDInterfaces {...}` <-- namespacing stuff goes inside
+* `export` <-- this keyword makes stuff inside of namespace available outside of file
+* `/// <reference path="drag-drop-interfaces.ts" />` <-- this is some ugly-ass import
+* This shit seems wonky. 
+* 
+
+### 143. Organizing Files & Folders
+
+### 144. A Problem with Namespace Imports
+
+### 145. Important: Use Chrome or Firefox
+
+### 146. Using ES Modules
+
+### 147. Understanding various Import & Export Syntaxes
+
+### 148. How Does Code in Modules Execute?
+
+### 149. Wrap Up
+
+### 150. Useful Resources & Tips
 
 ## Section 11: Using Webpack with TypeScript
 
