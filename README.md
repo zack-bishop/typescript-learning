@@ -1066,12 +1066,20 @@ class Product {
 * `template literals` <-- this is the specific term for `${this.variable}` usage;
 
 ### 134. Utilizing Interfaces to Implement Drag & Drop
+* `implements` <-- What's the difference between `implements` and `extends`?
+* This is novel and interesting.  or is it interestingly novel?  Novelly interesting?
 
 ### 135. Drag Events & Reflecting the Current State in the UI
+* really need to figure out that `autobind` decorator.
 
 ### 136. Adding a Droppable Area
+* `.dataTransfer` <-- another new thing to research
+* `.setData` <-- Another thing to research.
+* Learning a lot about draging / dropping.  Refer to this section in the future if you need to use these functions
 
 ### 137. Finishing Drag & Drop
+* `.find` <-- another usefule JS thingie
+* `.slice()` <-- I know I've mentioned this one before, but you need to look into this one again.
 
 ### 138. Wrap Up
 
