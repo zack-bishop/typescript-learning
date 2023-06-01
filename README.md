@@ -1132,11 +1132,18 @@ class Product {
 * `default export` <-- a bit confused by what this is
 
 ### 148. How Does Code in Modules Execute?
+* interesting discussion on how a `const` in a file that's reused a lot works
 
 ### 149. Wrap Up
+* wrapping up
+* use ES modules for extra type security
 
 ### 150. Useful Resources & Tips
+* These links might also be interesting:
+  * [JavaScript Modules (Overview)](https://medium.com/computed-comparisons/commonjs-vs-amd-vs-requirejs-vs-es6-modules-2e814b114a0b)
+  * [More on ES Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
 
+  
 ## Section 11: Using Webpack with TypeScript
 
 ## Section 12: 3rd Party Libraries & TypeScript
