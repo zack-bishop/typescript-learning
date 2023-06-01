@@ -1127,6 +1127,9 @@ class Product {
 * This method is the recommended method.  It allows TypeScript to detect errors.
 
 ### 147. Understanding various Import & Export Syntaxes
+* `import * as Validation from '../util/validate.js';` <-- this grouping syntax is interesting
+* `import {autobind as Autobind} from '../decorators/autobind.js';` <-- this is really interesting as well
+* `default export` <-- a bit confused by what this is
 
 ### 148. How Does Code in Modules Execute?
 
