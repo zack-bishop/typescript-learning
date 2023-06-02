@@ -1158,8 +1158,10 @@ class Product {
 * It's a good idea to include a typescript version via Webpack
 
 ### 154. Adding Entry & Output Configuration
+* output path needs to be an absolute path
 
 ### 155. Adding TypeScript Support with the ts-loader Package
+* Webpack makes my brain hurt.  Trying to comment up the webpack.config file.
 
 ### 156. Adjust Webpack Config
 
