@@ -1226,10 +1226,15 @@ class Product {
 * `fetch()` <-- modern way to make API calls
 
 ### 173. Rendering a Map with Google Maps (incl. Types!)
-
+* so much pain!  I hate google's api's. So hard to navigate their dashboard.
+* `types/*`<-- a handy resources though. 
 ### 174. Working with Maps without a Credit Card
+* `OpenLayers` <-- google maps alternative
 
 ### 175. Useful Resources and Links
+* [Google Maps Pricing](https://cloud.google.com/maps-platform/pricing/sheet/)
+* [Google Geocoding API](https://developers.google.com/maps/documentation/geocoding/start)
+* [Google Maps JS SDK](https://developers.google.com/maps/documentation/javascript/tutorial)
 
 ## Section 14: React.js & TypeScript
 
