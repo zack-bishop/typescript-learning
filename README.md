@@ -1238,6 +1238,35 @@ class Product {
 
 ## Section 14: React.js & TypeScript
 
+### 176. Module Introduction
+* react + TypeScript = Popular Combination 
+* react is good for UI
+* the lecturer specifically said that he will not be teaching React.  Since I don't know react, this section isn't going do me much good, but I'll watch it none the less
+
+### 177. Setting up a React + TypeScript Project
+
+### 178. How do React + TypeScript Work Together
+
+### 179. Working with Props and Types for Props
+ 
+### 180. Getting User Input with "refs"
+
+### 181. Cross-Component Communication
+
+### 182. Working with State & Types
+
+### 183. Managing State Better
+
+### 184. More Props & State Work
+
+### 185. Adding Styling
+
+### 186. Types for other React Features (e.g. Redux or Routing)
+
+### 187. Wrap Up
+
+### 188. Useful Resource & Links
+
 ## Section 15: Node.js + Express & TypeScript 
 
 ## Section 16: Course Roundup
