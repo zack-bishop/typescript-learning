@@ -1164,22 +1164,76 @@ class Product {
 * Webpack makes my brain hurt.  Trying to comment up the webpack.config file.
 
 ### 156. Adjust Webpack Config
+* getting a bit annoyed by all the issues I'm having with Webpack due to it being out of date.  I'm going to watch the videos but ski
 
 ### 157. Finishing the Setup & Adding webpack-dev-server
+* couldn't get this to work, so I'm gonna skip this section.
+* The reason it's not working I think 
 
 ### 158. Adding a Production Workflow
+* Production workflow didn't work. 
+* I think the reason is because there's been a change to Webpack in version 5 that's preventing things from working as expected.
 
 ### 159. Wrap Up
 
 ### 160. Useful Resources & Links
+* [Official Webpack Docs](https://webpack.js.org/)
 
 ## Section 12: 3rd Party Libraries & TypeScript
 
+### 161. Module Introduction  
+* will talk about "normal" javascript libraries
+* Will talk about TypeScript specific libraries
+
+### 162. Using JavaScript(!) Libraries with TypeScript
+* `lodash` <-- Normal library
+  * `npm i --save lodash`
+  * Libraries that aren't specific to TypeScript will causes errors normally.
+* `@types/lodash` <-- a package that makes it work
+  * `*.ds.ts` <-- these are translations files for TypeScript
+
+### 163. Using "declare" as a "Last Resort"
+* `declar var GLOBAL: string` <-- a way to convince TS that a variable exists.
+
+### 164. No types needed: class-transformer
+* `class-transformer` <-- a popular TS library.
+  * `plainToClass` <-- a method that easily converts plain JS objects to TS objects.
+
+### 165. TypeScript-embracing: class-validator
+* `class-validator` <-- utilizes decorators to make a powerful validation tool
+
+### 166. Wrap Up
+* a quick wrap up
+
+### 167. Useful Resources and links.
+* Nothing of note
+
 ## Section 13: Time to Practice!  Let's build a "Select & Share a Place" App (incl. Google Maps)
+
+### 168. Module Introduction
+* be creating a simple map app  
+
+### 169. Project Setup
+* nothing of note in this section.
+
+### 170. Getting User Input
+* basic stuff here.  Nothing new
+
+### 171. Setting Up a Google API Key
+* `AIzaSyAVt5KyyqelXbj21WwMsBQqT-kclLs2W_c` my api key
+
+### 172. Using Axios to Fetch Coordinates for an Entered Address
+* `fetch()` <-- modern way to make API calls
+
+### 173. Rendering a Map with Google Maps (incl. Types!)
+
+### 174. Working with Maps without a Credit Card
+
+### 175. Useful Resources and Links
 
 ## Section 14: React.js & TypeScript
 
-## Section 15: Node.js + Express & TypeScript
+## Section 15: Node.js + Express & TypeScript 
 
 ## Section 16: Course Roundup
 
