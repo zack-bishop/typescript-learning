@@ -1220,7 +1220,7 @@ class Product {
 * basic stuff here.  Nothing new
 
 ### 171. Setting Up a Google API Key
-* `AIzaSyAVt5KyyqelXbj21WwMsBQqT-kclLs2W_c` my api key
+* `***` my api key [DELETED from google console]
 
 ### 172. Using Axios to Fetch Coordinates for an Entered Address
 * `fetch()` <-- modern way to make API calls
